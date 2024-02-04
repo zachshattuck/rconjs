@@ -2,7 +2,7 @@
 
 import { Socket } from 'node:net'
 
-const PacketType = {
+export const PacketType = {
   'SERVERDATA_AUTH': 3,
   'SERVERDATA_AUTH_RESPONSE': 3,
   'SERVERDATA_EXECCOMAND': 2,
@@ -60,9 +60,10 @@ export function readPacket(buffer: Buffer): PacketWithSize {
 
 export class RCON {
   private client: Socket
-  connected = false
 
+  connected = false
   authorized = false
+
   private authPacket: Packet | null = null
   private resolveAuthPromise: ((value: void | PromiseLike<void>) => void) | null = null
   private rejectAuthPromise: ((reason?: any) => void) | null = null
