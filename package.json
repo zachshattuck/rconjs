@@ -1,0 +1,30 @@
+{
+  "name": "rconjs",
+  "version": "1.0.0",
+  "description": "Minimal RCON client for Node.js",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zachshattuck/rconjs.git"
+  },
+  "keywords": [
+    "rcon",
+    "node",
+    "javascript",
+    "typescript"
+  ],
+  "author": "Zach Shattuck",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zachshattuck/rconjs/issues"
+  },
+  "homepage": "https://github.com/zachshattuck/rconjs#readme",
+  "devDependencies": {
+    "@types/node": "^20.11.16",
+    "typescript": "^5.3.3"
+  }
+}
