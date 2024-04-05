@@ -2,10 +2,12 @@
   "name": "rconjs",
   "version": "1.0.0",
   "description": "Minimal RCON client for Node.js",
-  "main": "lib/rcon.js",
+  "main": "lib/index.js",
   "scripts": {
-    "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "tsc": "tsc",
+    "bundle": "rollup -c",
+    "build": "npm run tsc && npm run bundle",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -24,7 +26,11 @@
   },
   "homepage": "https://github.com/zachshattuck/rconjs#readme",
   "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.6",
     "@types/node": "^20.11.16",
+    "rollup": "^4.14.0",
+    "rollup-plugin-dts": "^6.1.0",
+    "tslib": "^2.6.2",
     "typescript": "^5.3.3"
   }
 }

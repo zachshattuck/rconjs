@@ -58,7 +58,8 @@ export function readPacket(buffer: Buffer): PacketWithSize {
 }
 
 
-export class RCON {
+/** Describes an RCON client with functions to connect, authorize, and send packets */
+export class RCONClient {
   private client: Socket
 
   connected = false
@@ -172,3 +173,5 @@ export class RCON {
     }))
   }
 }
+
+export default RCONClient
