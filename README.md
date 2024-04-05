@@ -20,7 +20,7 @@ async function start() {
     await client.connect()
     await client.authorize()
 
-    client.send('broadcast Hello from rconjs!', (res) => {
+    client.send('say Hello from rconjs!', (res) => {
       console.log(res)
     })
   } catch(e) {

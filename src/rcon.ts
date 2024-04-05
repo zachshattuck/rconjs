@@ -79,6 +79,8 @@ export class RCONClient {
     this.client.on('data', (buffer) => {
       const data = readPacket(buffer)
 
+      console.log(data)
+
       switch(data.type) {
 
         case 2: {
